@@ -1,0 +1,9 @@
+export {default as global} from './global/reducers';
+export {default as register} from './register/reducers';
+export {default as user} from './user/reducers';
+export {default as auths} from './auths/reducers';
+export {default as loading} from './loading/reducers';
+export {default as modal} from './modal/reducers';
+export {default as ticker} from './ticker/reducers';
+export {default as wallet} from './wallet/reducers';
+export {default as stakeRay} from './stake/ray/reducers';

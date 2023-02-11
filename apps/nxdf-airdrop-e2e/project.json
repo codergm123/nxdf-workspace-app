@@ -1,0 +1,28 @@
+{
+  "root": "apps/nxdf-airdrop-e2e",
+  "sourceRoot": "apps/nxdf-airdrop-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/nxdf-airdrop-e2e/cypress.json",
+        "devServerTarget": "nxdf-airdrop:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "nxdf-airdrop:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nxdf-airdrop-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["nxdf-airdrop"]
+}

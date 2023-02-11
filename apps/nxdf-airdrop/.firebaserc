@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "eminent-glider-213307"
+  },
+  "targets": {
+    "eminent-glider-213307": {
+      "hosting": {
+        "nxdf-airdrop": [
+          "nxdf-airdrop"
+        ]
+      }
+    }
+  }
+}

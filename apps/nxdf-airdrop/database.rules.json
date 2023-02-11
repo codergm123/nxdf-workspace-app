@@ -1,0 +1,14 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "event_users": {
+      "$event_id": {
+        ".indexOn": [
+          "email",
+          "wallet_address"
+        ]
+      }
+    }
+  }
+}

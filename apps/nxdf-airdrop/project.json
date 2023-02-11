@@ -1,0 +1,54 @@
+{
+  "root": "apps/nxdf-airdrop",
+  "sourceRoot": "apps/nxdf-airdrop",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/nxdf-airdrop",
+        "outputPath": "apps/nxdf-airdrop/build"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "nxdf-airdrop:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "nxdf-airdrop:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "nxdf-airdrop:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/nxdf-airdrop"],
+      "options": {
+        "jestConfig": "apps/nxdf-airdrop/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nxdf-airdrop/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}

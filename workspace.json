@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "projects": {
+    "artistella": "apps/artistella",
+    "staking4u": "apps/staking4u",
+    "soldrops": "apps/soldrops",
+    "nxdf-airdrop": "apps/nxdf-airdrop",
+    "nxdf-api": "apps/nxdf-api"
+  }
+}
